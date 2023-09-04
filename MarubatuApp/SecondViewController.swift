@@ -8,6 +8,8 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    var questions: [[String: Any]] = []
+    var answer = false
 
     @IBOutlet weak var textView: UITextField!
     override func viewDidLoad() {
@@ -22,12 +24,29 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func marubatuSeg(_ sender: Any) {
+        switch (sender as AnyObject).selectedSegmentIndex {
+            case 0:
+                answer = false
+            case 1:
+                answer = true
+            default:
+                break
+        }
     }
     
     @IBAction func setButton(_ sender: Any) {
+        if let newText = textView.text {
+        let newQuestions: [String: Any] = ["question": newText]
+            questions.append(newQuestions)
+            questions.append(["answer": answer])
+            textView.text = ""
+            print(questions)
+        }
+        
     }
     
     @IBAction func deleteButton(_ sender: Any) {
+        questions.isEmpty
     }
     /*
     // MARK: - Navigation

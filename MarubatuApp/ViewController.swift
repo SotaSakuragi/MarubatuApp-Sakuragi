@@ -13,25 +13,14 @@ class ViewController: UIViewController {
     
     var currentQuestionNum: Int = 0
     
-    let questions: [[String: Any]] = [
-            [
-                "question": "iPhoneアプリを開発する統合環境はZcodeである",
-                "answer": false
-            ],
-            [
-                "question": "Xcode画面の右側にはユーティリティーズがある",
-                "answer": true
-            ],
-            [
-                "question": "UILabelは文字列を表示する際に利用する",
-                "answer": true
-            ]
-        ]
+    var questions: [[String: Any]] = []
     
     func showQuestion() {
-        let question = questions[currentQuestionNum]
-        if let que = question["question"] as? String {
-            questionLabel.text = que
+        if !questions.isEmpty {
+            let question = questions[currentQuestionNum]
+            if let que = question["question"] as? String {
+                questionLabel.text = que
+            }
         }
     }
     
