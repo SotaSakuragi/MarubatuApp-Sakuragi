@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,7 +45,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UY-Ww-bYu">
-                                <rect key="frame" x="20" y="67" width="353" height="100"/>
+                                <rect key="frame" x="20" y="102" width="353" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="CM7-iq-nHz"/>
                                 </constraints>
@@ -52,6 +53,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7c-jZ-vxL">
+                                <rect key="frame" x="96.666666666666686" y="59" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ejn-6g-NXR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="問題を作成する"/>
+                                <connections>
+                                    <segue destination="Ziw-kd-0zQ" kind="show" id="VZx-m8-Qhw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,13 +71,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n8a-ky-7Ms" secondAttribute="bottom" constant="20" id="5V3-jg-HbN"/>
                             <constraint firstItem="n8a-ky-7Ms" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="89o-19-S94"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VWR-ba-oEZ" secondAttribute="bottom" constant="20" id="ABG-9B-2Si"/>
+                            <constraint firstItem="5UY-Ww-bYu" firstAttribute="top" secondItem="i7c-jZ-vxL" secondAttribute="bottom" constant="8" id="Ccl-tl-Lw9"/>
                             <constraint firstItem="VWR-ba-oEZ" firstAttribute="leading" secondItem="n8a-ky-7Ms" secondAttribute="trailing" constant="8" id="Foe-dn-O5E"/>
                             <constraint firstItem="VWR-ba-oEZ" firstAttribute="height" secondItem="n8a-ky-7Ms" secondAttribute="height" id="Mnr-zJ-OPC"/>
-                            <constraint firstItem="5UY-Ww-bYu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Zmb-WK-B68"/>
                             <constraint firstItem="VWR-ba-oEZ" firstAttribute="width" secondItem="n8a-ky-7Ms" secondAttribute="width" id="aP8-tb-jrZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5UY-Ww-bYu" secondAttribute="trailing" constant="20" id="elI-Ut-rTX"/>
                             <constraint firstItem="5UY-Ww-bYu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fdR-n8-nsY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VWR-ba-oEZ" secondAttribute="trailing" constant="20" id="kLs-pI-FEO"/>
+                            <constraint firstItem="i7c-jZ-vxL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yyb-TF-XqG"/>
+                            <constraint firstItem="i7c-jZ-vxL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zim-ia-HFD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -76,8 +90,80 @@
             </objects>
             <point key="canvasLocation" x="3.8167938931297707" y="3.5211267605633805"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="VZq-B0-kSY">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Ziw-kd-0zQ" customClass="SecondViewController" customModule="MarubatuApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w49-kM-T20">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah1-Zm-22s">
+                                <rect key="frame" x="96.666666666666686" y="0.0" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9sP-UR-jwu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="TOPに戻る"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3l-Sw-LZK">
+                                <rect key="frame" x="59" y="350" width="275" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="nta-wp-e91"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unY-LF-tye">
+                                <rect key="frame" x="135" y="618" width="123" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="問題をすべて削除">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bQQ-CK-wlU">
+                                <rect key="frame" x="123.66666666666669" y="413" width="146" height="32"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="1rN-Gc-DbI"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="✗"/>
+                                    <segment title="◯"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoT-EP-yZk">
+                                <rect key="frame" x="123.66666666666669" y="497" width="146" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="問題を保存する"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rFp-vH-CmU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ah1-Zm-22s" firstAttribute="top" secondItem="rFp-vH-CmU" secondAttribute="top" id="62N-5b-ENM"/>
+                            <constraint firstItem="bQQ-CK-wlU" firstAttribute="top" secondItem="d3l-Sw-LZK" secondAttribute="bottom" constant="29" id="FwQ-WG-zpO"/>
+                            <constraint firstItem="unY-LF-tye" firstAttribute="top" secondItem="BoT-EP-yZk" secondAttribute="bottom" constant="86" id="GTP-cV-FoW"/>
+                            <constraint firstItem="BoT-EP-yZk" firstAttribute="centerX" secondItem="w49-kM-T20" secondAttribute="centerX" id="LZU-Aj-H1i"/>
+                            <constraint firstItem="unY-LF-tye" firstAttribute="centerX" secondItem="w49-kM-T20" secondAttribute="centerX" id="Vn2-O3-syM"/>
+                            <constraint firstItem="BoT-EP-yZk" firstAttribute="top" secondItem="bQQ-CK-wlU" secondAttribute="bottom" constant="53" id="gZT-YX-QmR"/>
+                            <constraint firstItem="d3l-Sw-LZK" firstAttribute="centerX" secondItem="w49-kM-T20" secondAttribute="centerX" id="ggC-GY-HyV"/>
+                            <constraint firstItem="bQQ-CK-wlU" firstAttribute="centerX" secondItem="w49-kM-T20" secondAttribute="centerX" id="naz-5T-ndW"/>
+                            <constraint firstItem="d3l-Sw-LZK" firstAttribute="top" secondItem="Ah1-Zm-22s" secondAttribute="bottom" constant="315" id="yW4-PB-Cpi"/>
+                            <constraint firstItem="Ah1-Zm-22s" firstAttribute="centerX" secondItem="w49-kM-T20" secondAttribute="centerX" id="yic-tA-BS6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="p4r-Gv-eow"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ogi-PW-isV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994.6564885496183" y="3.5211267605633805"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -86,6 +172,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
