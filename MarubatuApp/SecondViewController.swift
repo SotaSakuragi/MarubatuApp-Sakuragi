@@ -9,6 +9,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +17,18 @@ class SecondViewController: UIViewController {
     }
     
 
+    @IBAction func topButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func marubatuSeg(_ sender: Any) {
+    }
+    
+    @IBAction func setButton(_ sender: Any) {
+    }
+    
+    @IBAction func deleteButton(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

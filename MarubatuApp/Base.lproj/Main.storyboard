@@ -105,6 +105,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="TOPに戻る"/>
+                                <connections>
+                                    <action selector="topButton:" destination="Ziw-kd-0zQ" eventType="touchUpInside" id="8Uj-Im-uxy"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3l-Sw-LZK">
                                 <rect key="frame" x="59" y="350" width="275" height="34"/>
@@ -120,6 +123,9 @@
                                 <state key="normal" title="問題をすべて削除">
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButton:" destination="Ziw-kd-0zQ" eventType="touchUpInside" id="1M7-dK-WkO"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bQQ-CK-wlU">
                                 <rect key="frame" x="123.66666666666669" y="413" width="146" height="32"/>
@@ -131,11 +137,17 @@
                                     <segment title="✗"/>
                                     <segment title="◯"/>
                                 </segments>
+                                <connections>
+                                    <action selector="marubatuSeg:" destination="Ziw-kd-0zQ" eventType="valueChanged" id="Ur4-u6-Ebt"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoT-EP-yZk">
                                 <rect key="frame" x="123.66666666666669" y="497" width="146" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="問題を保存する"/>
+                                <connections>
+                                    <action selector="setButton:" destination="Ziw-kd-0zQ" eventType="touchUpInside" id="yj5-xq-PNC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rFp-vH-CmU"/>
@@ -154,6 +166,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p4r-Gv-eow"/>
+                    <connections>
+                        <outlet property="textView" destination="d3l-Sw-LZK" id="pDd-mM-XyF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogi-PW-isV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
